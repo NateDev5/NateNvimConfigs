@@ -1,1 +1,1 @@
-My nvim configs
+# My nvim configs

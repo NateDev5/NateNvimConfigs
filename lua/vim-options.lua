@@ -3,4 +3,6 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("tokyonight")
+
+vim.cmd("Neotree filesystem reveal left")
