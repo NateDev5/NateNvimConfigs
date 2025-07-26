@@ -12,6 +12,12 @@ return {
 			})
 
 			vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+
+			vim.api.nvim_create_autocmd("BufPreWrite", {
+				callback = function()
+					vim.lsp.buf.format({ async = true })
+				end,
+			})
 		end,
 	},
 }
