@@ -7,7 +7,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.statuscolumn = "%s %{printf('%-3d', v:lnum)}┃ %{printf('%-3d', v:relnum)}"
 
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("gruvbox")
 
 vim.cmd("Neotree filesystem reveal left")
 
