@@ -8,13 +8,15 @@ return {
         },
         config = function()
             require('neo-tree').setup({
-                event_handlers = {
-                    {
-                        event = "after_render",
-                        handler = function()
-                            vim.cmd("setlocal statuscolumn=")
-                        end
-                    }
+                window = {
+                    position = "float",
+                    popup = {
+                        size = {
+                            height = "50%",
+                            width = "50%",
+                        },
+                        position = "50%",
+                    },
                 },
                 filesystem = {
                     filtered_items = {
