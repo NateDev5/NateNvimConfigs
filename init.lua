@@ -19,3 +19,9 @@ vim.keymap.set('n', '<Right>', ":lua notify_arrow_pressed('l')<CR>", { noremap =
 vim.keymap.set('n', '<leader>xx', ":Trouble diagnostics toggle<CR>", {})
 
 vim.keymap.set('n', '<leader>s', ":ClangdSwitchSourceHeader<CR>", { noremap = true, silent = true})
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+    callback = function ()
+        vim.cmd("set statuscolumn=%s %{printf('%-3d', v:lnum)}┃ %{printf('%-3d', v:relnum)}")
+    end
+})
